@@ -1,60 +1,94 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lolow Corporation</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <title>Lolow Corporation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #111;
+            text-align: center;
+            padding: 0;
+        }
+        header {
+            padding: 2rem;
+            background-color: #000;
+            color: white;
+        }
+        header img {
+            max-width: 150px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-top: 1rem;
+        }
+        .hero {
+            padding: 3rem 1rem;
+            background-color: #f4f4f4;
+        }
+        .hero h2 {
+            font-size: 2rem;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 2rem 1rem;
+        }
+        .feature {
+            background: #000;
+            color: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            max-width: 300px;
+        }
+        .testimonials {
+            padding: 2rem 1rem;
+            background-color: #e0e0e0;
+        }
+        footer {
+            background-color: #111;
+            color: #ccc;
+            padding: 2rem 1rem;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
-  <header class="header">
-    <img src="logo.png" alt="Logo Lolow Corporation" class="logo" />
-    <h1 class="title">Lolow Corporation</h1>
-  </header>
-
-  <section class="products">
-    <h2>Nos Inventions</h2>
-    <div class="product">
-      <img src="https://placehold.co/400x250?text=A%C3%A9roTringle" alt="AéroTringle" />
-      <div>
-        <h3>AéroTringle™</h3>
-        <p>Tringle à rideaux émotionnelle, connectée en Bluetooth aux larmes de vos ex.</p>
-        <strong>Prix : 299,99€</strong>
-      </div>
-    </div>
-    <div class="product">
-      <img src="https://placehold.co/400x250?text=Clav%C3%A9ol" alt="Clavéol" />
-      <div>
-        <h3>Clavéol™</h3>
-        <p>Clavier qui tape des mails passifs-agressifs à votre boss, sans surveillance.</p>
-        <strong>Prix : 129,99€</strong>
-      </div>
-    </div>
-    <div class="product">
-      <img src="https://placehold.co/400x250?text=VibroToast" alt="VibroToast" />
-      <div>
-        <h3>VibroToast™</h3>
-        <p>Grille-pain zen qui murmure des mantras bouddhistes au gluten.</p>
-        <strong>Prix : 89,99€</strong>
-      </div>
-    </div>
-  </section>
-
-  <section class="testimonials">
-    <h2>Avis Clients</h2>
-    <blockquote>“J’ai pleuré avec l’AéroTringle… et elle m’a comprise.” — Mireille, 42 ans</blockquote>
-    <blockquote>“Grâce à Clavéol, je suis au chômage. Merci Lolow Corp !” — Jean-Kevin, ancien RH</blockquote>
-    <blockquote>“VibroToast m’a sauvé du burn-out glutené.” — Léa, influenceuse bien-être</blockquote>
-  </section>
-
-  <footer>
-    <p>Suivez-nous (ou pas) :</p>
-    <div class="socials">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" />
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3046/3046122.png" alt="TikTok" />
-    </div>
-    <p class="disclaimer">© 2025 Lolow Corporation — Site purement fictif.</p>
-  </footer>
+    <header>
+        <img src="logo.png" alt="Logo Lolow Corporation">
+        <h1>Lolow Corporation</h1>
+        <p>Changez le monde. Une tringle à la fois.</p>
+    </header>
+    <section class="hero">
+        <h2>Découvrez l'AéroTringle™</h2>
+        <p>La première tringle à rideaux contrôlée par une IA passionnée de poésie japonaise.</p>
+    </section>
+    <section class="features">
+        <div class="feature">
+            <h3>🧠 Intelligente</h3>
+            <p>Elle récite des haïkus à vos rideaux chaque matin.</p>
+        </div>
+        <div class="feature">
+            <h3>🎭 Émotionnelle</h3>
+            <p>Détecte votre humeur et s'ajuste en conséquence.</p>
+        </div>
+        <div class="feature">
+            <h3>🌪️ Dynamique</h3>
+            <p>Tourne à 360° sans aucune raison valable.</p>
+        </div>
+    </section>
+    <section class="testimonials">
+        <h2>Ils témoignent</h2>
+        <p>"Depuis que j’ai l’AéroTringle™, mon chat me respecte." – Jean-Cumulus B.</p>
+        <p>"Elle a récité un poème à mon rideau. Je pleure encore." – Sophie R.</p>
+    </section>
+    <footer>
+        Produit fictif par la très sérieuse Lolow Corporation. Ne pas essayer chez soi. Peut contenir des traces de rideaux.
+    </footer>
 </body>
 </html>
