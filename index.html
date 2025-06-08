@@ -1,102 +1,60 @@
-// Un site fictif "poussé" de Lolow Corporation
-// Avec produits absurdes, animations, et style moderne
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
-import { Sparkles, Brain, MousePointerClick, CloudLightning } from "lucide-react";
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lolow Corporation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <img src="logo.png" alt="Logo Lolow Corporation" class="logo" />
+    <h1 class="title">Lolow Corporation</h1>
+  </header>
 
-const products = [
-  {
-    name: "AéroTringle™",
-    icon: <CloudLightning size={32} />,
-    desc: "Tringle à rideaux émotionnelle, pilotée par IA poétique.",
-    image: "https://placehold.co/400x250?text=A%C3%A9roTringle%E2%84%A2"
-  },
-  {
-    name: "Clavéol™",
-    icon: <Brain size={32} />,
-    desc: "Clavier qui tape des mails passifs-agressifs tout seul.",
-    image: "https://placehold.co/400x250?text=Clav%C3%A9ol%E2%84%A2"
-  },
-  {
-    name: "VibroToast™",
-    icon: <Sparkles size={32} />,
-    desc: "Grille-pain zen qui murmure des mantras au gluten.",
-    image: "https://placehold.co/400x250?text=VibroToast%E2%84%A2"
-  }
-];
-
-export default function LolowCorp() {
-  return (
-    <div className="bg-white text-black font-sans">
-      <header className="text-center p-8 bg-black text-white">
-        <motion.h1
-          className="text-4xl font-bold"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-        >
-          Lolow Corporation
-        </motion.h1>
-        <motion.p
-          className="text-lg mt-2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-        >
-          Réinventer la normalité, une absurdité à la fois.
-        </motion.p>
-      </header>
-
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-6 p-8">
-        {products.map((p, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.2 }}
-          >
-            <Card className="rounded-2xl shadow-lg">
-              <img
-                src={p.image}
-                alt={p.name}
-                className="rounded-t-2xl w-full h-48 object-cover"
-              />
-              <CardContent className="p-4">
-                <div className="flex items-center gap-2 mb-2 text-xl font-semibold">
-                  {p.icon}
-                  {p.name}
-                </div>
-                <p className="text-sm text-gray-700">{p.desc}</p>
-              </CardContent>
-            </Card>
-          </motion.div>
-        ))}
-      </section>
-
-      <section className="text-center p-8 bg-gray-100">
-        <motion.h2
-          className="text-2xl font-bold mb-4"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-        >
-          Rejoignez l’univers LOL+ dès aujourd’hui
-        </motion.h2>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
-        >
-          <Button className="text-lg px-6 py-3 rounded-2xl">S’abonner pour ne rien comprendre</Button>
-        </motion.div>
-      </section>
-
-      <footer className="text-center p-6 text-sm text-gray-500">
-        Site parodique. Produit par 3 IA en burn-out et une cafetière connectée.
-      </footer>
+  <section class="products">
+    <h2>Nos Inventions</h2>
+    <div class="product">
+      <img src="https://placehold.co/400x250?text=A%C3%A9roTringle" alt="AéroTringle" />
+      <div>
+        <h3>AéroTringle™</h3>
+        <p>Tringle à rideaux émotionnelle, connectée en Bluetooth aux larmes de vos ex.</p>
+        <strong>Prix : 299,99€</strong>
+      </div>
     </div>
-  );
-}
+    <div class="product">
+      <img src="https://placehold.co/400x250?text=Clav%C3%A9ol" alt="Clavéol" />
+      <div>
+        <h3>Clavéol™</h3>
+        <p>Clavier qui tape des mails passifs-agressifs à votre boss, sans surveillance.</p>
+        <strong>Prix : 129,99€</strong>
+      </div>
+    </div>
+    <div class="product">
+      <img src="https://placehold.co/400x250?text=VibroToast" alt="VibroToast" />
+      <div>
+        <h3>VibroToast™</h3>
+        <p>Grille-pain zen qui murmure des mantras bouddhistes au gluten.</p>
+        <strong>Prix : 89,99€</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>Avis Clients</h2>
+    <blockquote>“J’ai pleuré avec l’AéroTringle… et elle m’a comprise.” — Mireille, 42 ans</blockquote>
+    <blockquote>“Grâce à Clavéol, je suis au chômage. Merci Lolow Corp !” — Jean-Kevin, ancien RH</blockquote>
+    <blockquote>“VibroToast m’a sauvé du burn-out glutené.” — Léa, influenceuse bien-être</blockquote>
+  </section>
+
+  <footer>
+    <p>Suivez-nous (ou pas) :</p>
+    <div class="socials">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" />
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+      <img src="https://cdn-icons-png.flaticon.com/512/3046/3046122.png" alt="TikTok" />
+    </div>
+    <p class="disclaimer">© 2025 Lolow Corporation — Site purement fictif.</p>
+  </footer>
+</body>
+</html>
